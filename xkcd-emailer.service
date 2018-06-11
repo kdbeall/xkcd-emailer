@@ -1,0 +1,10 @@
+[Unit]
+Description=A simple program to email xkcd comics to yourself
+After=multi-user.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/python3 /usr/local/bin/xkcd-emailer.py
+
+[Install]
+WantedBy=multi-user.target
