@@ -1,5 +1,5 @@
 [Unit]
-Description=A simple program to email xkcd comics to yourself
+Description=A program automate emailing xkcd comics to yourself
 After=multi-user.target
 
 [Service]

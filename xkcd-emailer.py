@@ -47,11 +47,10 @@ def job():
     img_src = fetch_comic_img()
     send_email(img_src)
 
-
-schedule.every().monday.at("23:59").do(job)
-schedule.every().wednesday.at("23:59").do(job)
-schedule.every().friday.at("23:59").do(job)
-
-while True:
-    schedule.run_pending()
-    time.sleep(60)
+if __name__ == "__main__":
+    schedule.every().monday.at("23:59").do(job)
+    schedule.every().wednesday.at("23:59").do(job)
+    schedule.every().friday.at("23:59").do(job)
+    while True:
+        schedule.run_pending()
+        time.sleep(60)
